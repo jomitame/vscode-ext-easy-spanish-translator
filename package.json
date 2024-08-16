@@ -1,0 +1,71 @@
+{
+  "name": "easy-spanish-translator",
+  "displayName": "Easy Spanish Translator",
+  "description": "Translate to spanish the selected string",
+  "publisher": "jomitame",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:easy-spanish-translator.easyspanishtranslator",
+    "onCommand:easy-spanish-translator.helloWorld"
+
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "easy-spanish-translator.easyspanishtranslator",
+        "title": "Easy Spanish Translator"
+      },
+      {
+        "command": "easy-spanish-translator.helloWorld",
+        "title": "Hello World"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "easy-spanish-translator.easyspanishtranslator",
+          "group": "navigation"
+        },
+        {
+          "command": "easy-spanish-translator.helloWorld",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "type": "object",
+      "title": "Easy Spanish Translator Configuration",
+      "properties": {
+        "easyspanishtranslator.token": {
+          "type": "string",
+          "default": "",
+          "description": "Please input the Autenticación token for the RAPID API"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.7",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.92.0",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "xhr2": "^0.2.1"
+  }
+}
