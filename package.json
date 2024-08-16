@@ -3,6 +3,10 @@
   "displayName": "Easy Spanish Translator",
   "description": "Translate to spanish the selected string",
   "publisher": "jomitame",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jomitame/vscode-ext-easy-spanish-translator"
+  },
   "version": "0.1.0",
   "engines": {
     "vscode": "^1.92.0"
